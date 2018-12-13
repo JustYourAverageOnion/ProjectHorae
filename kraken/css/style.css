@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #42DCFF;
+}
+
+.container {
+  position: relative;
+  margin: 2em auto;
+  width: 800px;
+  height: 600px;
+  border-radius: 5em;
+  overflow: hidden;
+}
+.container > .sea {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #12AFE8;
+}
+.container > .sun {
+  position: absolute;
+  left: 150px;
+  top: 1%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(#FFF9D4, #FFF9D4 38%, #FAE676 38%, #FAE676 55%, #6BE4FF 55%, #6BE4FF 100%);
+}
+.container > .sun:after, .container > .sun:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+.container > .sun:before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: -70px 0 0 #FAE676, 70px 0 0 #FAE676;
+}
+.container > .sun:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: -50px 0 0 #FAE676, 50px 0 0 #FAE676;
+}
+.container > .birds > .bird1,
+.container > .birds > .bird2 {
+  position: absolute;
+  right: 130px;
+  top: 70px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: -9px -9px 0 white, 9px -9px 0 white;
+}
+.container > .birds > .bird1:after, .container > .birds > .bird1:before,
+.container > .birds > .bird2:after,
+.container > .birds > .bird2:before {
+  position: absolute;
+  content: '';
+  border: solid transparent 5px;
+  width: 10px;
+  height: 10px;
+  transform: translatey(-50%) translatey(1px) rotate(45deg);
+}
+.container > .birds > .bird1:after,
+.container > .birds > .bird2:after {
+  border-radius: 50% 0 0 50%;
+  left: 0;
+  border-left-color: white;
+}
+.container > .birds > .bird1:before,
+.container > .birds > .bird2:before {
+  border-radius: 50% 50% 0 0;
+  right: 0;
+  border-top-color: white;
+}
+.container > .birds > .bird2 {
+  top: 40px;
+  right: 90px;
+  transform: scale(0.8);
+}
+.container > .clouds {
+  position: absolute;
+  z-index: 3;
+}
+.container > .clouds > .cloud1,
+.container > .clouds > .cloud2,
+.container > .clouds > .cloud3,
+.container > .clouds > .cloud4,
+.container > .clouds > .cloud5 {
+  position: absolute;
+  background-color: white;
+  width: 150px;
+  height: 20px;
+  border-radius: 5em;
+}
+.container > .clouds > .cloud1:before,
+.container > .clouds > .cloud2:before,
+.container > .clouds > .cloud3:before,
+.container > .clouds > .cloud4:before,
+.container > .clouds > .cloud5:before {
+  position: absolute;
+  content: '';
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  bottom: 0;
+  right: -30px;
+}
+.container > .clouds > .cloud1:after,
+.container > .clouds > .cloud2:after,
+.container > .clouds > .cloud3:after,
+.container > .clouds > .cloud4:after,
+.container > .clouds > .cloud5:after {
+  position: absolute;
+  content: '';
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 35px;
+}
+.container > .clouds > .cloud1 {
+  top: 230px;
+  left: 50px;
+  transform: scale(0.8);
+}
+.container > .clouds > .cloud2 {
+  top: 120px;
+  left: 80px;
+  transform: scale(0.3);
+}
+.container > .clouds > .cloud3 {
+  top: 80px;
+  left: 480px;
+  transform: scale(0.4);
+}
+.container > .clouds > .cloud4 {
+  top: 130px;
+  left: 630px;
+  transform: scale(0.5);
+}
+.container > .clouds > .cloud5 {
+  top: 300px;
+  left: 580px;
+  transform: scale(0.6);
+}
+.container > .sky {
+  position: absolute;
+}

@@ -1,0 +1,155 @@
+* { 
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+body{
+	background-color: #42DCFF;
+}
+.container {
+	position: relative;
+	margin: 2em auto;
+	width: 800px;
+	height: 600px;
+	// border: solid black 1px;
+	border-radius: 5em;
+	overflow: hidden;
+	> .sea{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 200px;
+		background-color: #12AFE8;
+		
+	}
+	> .sun{
+		position: absolute;
+		left: 150px;
+		top: 1%;
+		$size: 100px;
+		width:$size;
+		height:$size;
+		border-radius:50%;
+		background: 
+			radial-gradient(
+			#FFF9D4,#FFF9D4 38%,
+			#FAE676 38%,#FAE676 55%,
+			#6BE4FF 55%,
+			#6BE4FF 100%,
+			);
+		&:after,&:before{
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: transparent;
+		}
+		&:before{
+			$size: 8px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			box-shadow:
+				-70px 0 0 #FAE676,
+				70px 0 0 #FAE676,
+		}
+		&:after{
+			$size: 10px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			box-shadow:
+				-50px 0 0 #FAE676,
+				50px 0 0 #FAE676,
+		}
+	}
+	> .birds{
+		> .bird1,
+		> .bird2 {
+			position: absolute;
+			right: 130px;
+			top: 70px;
+			$size: 5px;
+			width:$size;
+			height:$size;
+			border-radius:50%;
+			background-color: white;
+			box-shadow:
+				-9px -9px 0 white,
+				9px -9px 0 white;
+			&:after,&:before{
+				position: absolute;
+				content: '';
+				border: solid transparent 5px;
+				$size: 10px;
+				width:$size;
+				height:$size;
+				transform: translatey(-50%) translatey(1px) rotate(45deg)
+			}
+			&:after{
+				border-radius:50% 0 0 50%;
+				left: 0;
+				border-left-color:white; 
+			}
+			&:before{
+				border-radius:50% 50% 0 0;
+				right: 0;
+				border-top-color:white; 
+			}
+		}
+		> .bird2{
+			top: 40px;
+			right: 90px;
+			transform: scale(0.8);
+		}
+	}
+	> .clouds{
+		position: absolute;
+		z-index: 3;
+		> .cloud1,
+		> .cloud2,
+		> .cloud3,
+		> .cloud4,
+		> .cloud5{
+			position: absolute;
+			background-color: white;
+			width: 150px;
+			height: 20px;
+			border-radius: 5em;
+			&:before{
+				position: absolute;
+				content: '';
+				$size: 80px;
+				background-color: white;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				bottom: 0;
+				right: -30px;
+			}
+			&:after{
+				position: absolute;
+				content: '';
+				$size: 60px;
+				background-color: white;
+				width:$size;
+				height:$size;
+				border-radius:50%;
+				bottom: 0;
+				right: 35px;
+			}
+		}
+		> .cloud1{top: 230px;left: 50px;transform: scale(0.8);}
+		> .cloud2{top: 120px;left: 80px;transform: scale(0.3);}
+		> .cloud3{top: 80px;left: 480px;transform: scale(0.4);}
+		> .cloud4{top: 130px;left: 630px;transform: scale(0.5);}
+		> .cloud5{top: 300px;left: 580px;transform: scale(0.6);}
+	}
+	> .sky{
+		position: absolute;
+		
+	}
+}
